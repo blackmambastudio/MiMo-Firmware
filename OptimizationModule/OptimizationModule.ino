@@ -9,22 +9,22 @@
 #define LIGHTS  10
 #define N_LEDS 69
 #define BUTTON_0 5
-#define BUTTON_1 8
-#define BUTTON_2 6
-#define BUTTON_3 9
-#define BUTTON_4 7
+#define BUTTON_1 7
+#define BUTTON_2 9
+#define BUTTON_3 6 
+#define BUTTON_4 8
 
 
 int LEFT[3] = {1, 0, 0};
 int RIGHT[3] = {2, 0, 0};
 
 Adafruit_NeoPixel lights = Adafruit_NeoPixel(N_LEDS, LIGHTS, NEO_GRB + NEO_KHZ800);
-
-Button button_0 = {false, false, false, false, false, BUTTON_0, lights.Color(255, 0, 0), 0, 'd'};
-Button button_1 = {false, false, false, false, false, BUTTON_1, lights.Color(0, 255, 0), 1, 'f'};
-Button button_2 = {false, false, false, false, false, BUTTON_2, lights.Color(0, 0, 255), 2, 'g'};
-Button button_3 = {false, false, false, false, false, BUTTON_3, lights.Color(0, 0, 255), 3, 'c'};
-Button button_4 = {false, false, false, false, false, BUTTON_4, lights.Color(0, 0, 255), 4, 'v'};
+  
+Button button_0 = {false, false, false, false, false, BUTTON_0, lights.Color(255, 0, 255), 0, 'd'};
+Button button_1 = {false, false, false, false, false, BUTTON_1, lights.Color(255, 255, 0), 2, 'f'};
+Button button_2 = {false, false, false, false, false, BUTTON_2, lights.Color(0, 255, 255), 4, 'g'};
+Button button_3 = {false, false, false, false, false, BUTTON_3, lights.Color(125, 125, 200), 1, 'c'};
+Button button_4 = {false, false, false, false, false, BUTTON_4, lights.Color(255, 120, 255), 3, 'v'};
 
 byte ack[3] = {0x7E, 0x00, 0x01};
 const byte ID = 0x99;
